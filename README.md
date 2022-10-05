@@ -15,8 +15,8 @@ Then if n=0 || n=1 return n.  else if n>1 return Fn-1+Fn-2.
 ```txt
 Input: 0
 Output: 0
-Input: 2
+Input: 1
 Output: 1
-Input: 10
-Output: 55
+Input: 4
+Output: 3
 ```
