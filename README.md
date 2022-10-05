@@ -20,3 +20,7 @@ Output: 1
 Input: 4
 Output: 3
 ```
+
+The Recursion Method will Lead to a tree that will lead to a:
+- Time Complexity: 2^n "as every function calls two other functions."
+- Space Complexity: O(n) "function call stack size"
