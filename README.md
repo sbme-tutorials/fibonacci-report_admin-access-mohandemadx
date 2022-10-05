@@ -1,1 +1,22 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=8791566&assignment_repo_type=AssignmentRepo)
+# Fibonacci Series
+
+## By: Mohand Emad
+
+- All possible Algorithms to Find the nth element in the Fibonacci series. The Fibonacci sequence starts with
+a 0 followed by a 1. After that, every value is the sum of the two values
+preceding it. Here are the first seven values as an example: 0, 1, 1, 2, 3, 5, 8.
+
+## Method I - Using recursion
+
+General Mathematical Representation for the series: Fn = Fn-1 + Fn-2 unless n=0,1
+
+Then if n=0 || n=1 return n.  else if n>1 return Fn-1+Fn-2.
+
+```txt
+Input: 0
+Output: 0
+Input: 2
+Output: 1
+Input: 10
+Output: 55
+```
