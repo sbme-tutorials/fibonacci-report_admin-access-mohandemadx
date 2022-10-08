@@ -70,3 +70,67 @@ for(int i=2; i<=n; i++)
 The Space Optimization will Lead to much less Space-Complexity:
 - Time Complexity: O(n) for given n.
 - Space Complexity: O(1) 
+
+## Method IV - Using Matrix Method
+
+if we n times multiply the matrix M = {{1,1},{1,0}} to itself (in other words calculate power(M, n)), then we get the (n+1)th Fibonacci number as the element at row and column (0, 0) in the resultant matrix.
+As shown in this picture:
+
+- ![image](https://user-images.githubusercontent.com/102548631/194716579-3755ff16-9427-4137-b827-b839e16033da.png)
+
+In Addition to the main Fibonnaci Function, we will use 2 other functions:
+- Power Function
+```txt
+void power(int F[2][2], int n)
+{
+    int i;
+    int M[2][2] = { { 1, 1 }, { 1, 0 } };
+     
+    // n - 1 times multiply the
+    // matrix to {{1,0},{0,1}}
+    for(i = 2; i <= n; i++)
+        multiply(F, M);
+}
+```
+- Multiplication Function
+```txt
+void multiply(int F[2][2], int M[2][2])
+{
+    int x = F[0][0] * M[0][0] +
+            F[0][1] * M[1][0];
+    int y = F[0][0] * M[0][1] +
+            F[0][1] * M[1][1];
+    int z = F[1][0] * M[0][0] +
+            F[1][1] * M[1][0];
+    int w = F[1][0] * M[0][1] +
+            F[1][1] * M[1][1];
+     
+    F[0][0] = x;  F[0][1] = y;
+    F[1][0] = z;  F[1][1] = w;
+}
+```
+Similar to the Space Optimization, the Matrix Method will Lead to:
+- Time Complexity: O(n) for given n
+- Space Complexity: O(1)
+
+## Method V - Using "Optimized" Matrix Method
+
+We can do recursive multiplication to get power(M, n) in the previous method; in order to get a less Time-Complexity.
+```txt
+// Optimized version of power() in method 4
+void power(int F[2][2], int n)
+{
+    if(n == 0 || n == 1)
+       return;
+    int M[2][2] = {{1, 1}, {1, 0}};
+     
+    power(F, n / 2);
+    multiply(F, F);
+     
+    if (n % 2 != 0)
+        multiply(F, M);
+}
+```
+This Optimization will Lead to:
+- Time Complexity: O(log n) for given n
+- Space Complexity: O(log n) "function call stack size"
