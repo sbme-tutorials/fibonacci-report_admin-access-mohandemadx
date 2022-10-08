@@ -144,3 +144,6 @@ Direct Substitution in this formula will get us the Fibonnaci Number.
 This Method will Lead to:
 - Time Complexity:  O(log n) as the power function takes log n time
 - Space Complexity: O(1) "function call stack size"
+ 
+ ## Summary
+ ![Methods Comparison](https://user-images.githubusercontent.com/102548631/194720662-fed1fca5-5cd4-4dfb-8d7e-eed53db16992.jpg)
