@@ -142,5 +142,5 @@ This Optimization will Lead to:
 Direct Substitution in this formula will get us the Fibonnaci Number.
 
 This Method will Lead to:
-- Time Complexity:  O(2*log n) as the power function takes log n time
+- Time Complexity:  O(log n) as the power function takes log n time
 - Space Complexity: O(1) "function call stack size"
