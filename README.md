@@ -134,3 +134,13 @@ void power(int F[2][2], int n)
 This Optimization will Lead to:
 - Time Complexity: O(log n) for given n
 - Space Complexity: O(log n) "function call stack size"
+
+## Method VI - Using Binet’s formula
+
+![image](https://user-images.githubusercontent.com/102548631/194717982-c007ada2-2b03-41a6-9476-4e0e97cdcac0.png)
+
+Direct Substitution in this formula will get us the Fibonnaci Number.
+
+This Method will Lead to:
+- Time Complexity:  O(2*log n) as the power function takes log n time
+- Space Complexity: O(1) "function call stack size"
