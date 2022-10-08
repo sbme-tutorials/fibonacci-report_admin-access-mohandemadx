@@ -28,17 +28,14 @@ The Recursion Method will Lead to a tree that will lead to a:
 
 ## Method II - Using Daynamic Programming
 
-General Mathematical Representation for the series: Fn = Fn-1 + Fn-2 unless n=0,1
-
-Then if n=0 || n=1 return n.  else if n>1 return Fn-1+Fn-2.
+To avoid the Unnecessarily Repeated work in Recursion by storing DATA in an Array
 
 ```txt
-Input: 0
-Output: 0
-Input: 1
-Output: 1
-Input: 4
-Output: 3
+int f[n + 2];
+// 0th and 1st number of the
+// series are 0 and 1
+f[0] = 0;
+f[1] = 1;
 ```
 
 The Recursion Method will Lead to a tree that will lead to a:
